@@ -30,6 +30,11 @@ const RemoveBackground = () => {
      
      
      <p className='text-xs mt-1 text-gray-500 font-light'>Supports JPG, PNG, and other image formats.</p>
+     {input && (
+  <p className="text-xs mt-2 text-primary truncate">
+    Selected: {input.name}
+  </p>
+)}
       <button className="w-full bg-gradient-to-br from-primary to-secondary text-white flex justify-center items-center gap-2 px-4 py-2 mt-6 text-sm rounded-lg cursor-pointer hover:opacity-90 duration-300 transition-all ease-in-out">
         <Eraser className="w-5" />
         Remove Background
@@ -44,7 +49,7 @@ const RemoveBackground = () => {
       <div className="flex-1 flex justify-center items-center">
           <div className="text-sm flex flex-col items-center gap-5 text-gray-400">
         <Eraser className="w-9" />
-        <p>Upload and image and click "Remove Background" to get started</p>
+        <p>Upload an image and click "Remove Background" to get started</p>
           </div>
       </div>
     </div>
